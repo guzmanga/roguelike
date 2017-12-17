@@ -1,0 +1,259 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"random",
+				"randomNumber"
+			],
+			[
+				"emb",
+				"embargoRefactor"
+			],
+			[
+				"current",
+				"currentPlayer"
+			],
+			[
+				"council_",
+				"council_roomRefactor"
+			],
+			[
+				"game",
+				"gameState"
+			],
+			[
+				"smithy",
+				"smithyRefactor"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/gguzman/Code/roguelikedev"
+	],
+	"file_history":
+	[
+		"/Users/gguzman/Code/cleanup_final/cleanup/src/models/reports.interface.ts",
+		"/Users/gguzman/Code/CS372/Project1/chatclient.c",
+		"/Users/gguzman/Code/CS344/program2/guzmanga.adventure.c",
+		"/Users/gguzman/Code/CS344/program2/guzmanga.buildrooms.c",
+		"/Users/gguzman/Code/CS372/Project2/server.h",
+		"/Users/gguzman/Code/CS372/Project2/ftserver.c",
+		"/usr/include/servers/ls_defs.h",
+		"/Users/gguzman/Code/CS340/finalproject/examples/HTMLexample .php",
+		"/Users/gguzman/Code/CS340/finalproject/HTMLexample.php",
+		"/Users/gguzman/Code/CS464/JARVIS-on-Messenger-master/modules/src/news.py",
+		"/Users/gguzman/Code/CS340/Assignment2/Assignment2-definition-4.sql",
+		"/Users/gguzman/Code/CS362/ProjectB/projects/lej/URLValidator/src/UrlValidatorTest.java",
+		"/Users/gguzman/Code/ProjectB/URLValidator/src/UrlValidatorTest.java",
+		"/Users/gguzman/Code/CS362/ProjectB/projects/has/URLValidator/src/UrlValidatorTest.java",
+		"/Users/gguzman/Code/Intern Test/AssemblyInfo.cs",
+		"/Users/gguzman/Code/CS362/ProjectB/URLValidator/src/UrlValidatorTest.java",
+		"/Users/gguzman/Code/CS372/Project1/chatserve.py",
+		"/Users/gguzman/Desktop/cs362w17online-master/projects/guzmanga/lejDominion/dominion/badTestDrawCard.c",
+		"/Users/gguzman/Desktop/FlickrBrowser/app/src/main/java/com/timbuchalka/flickrbrowser/GetRawData.java",
+		"/Users/gguzman/Code/CS362/assignment3copy/guzmanga/dominion/cardtest1.c",
+		"/Users/gguzman/Code/CS362/cs362w17online-master/cs362w17online/dominion/dominion.c",
+		"/Users/gguzman/Desktop/Project1/chatserve.py",
+		"/Users/gguzman/Code/CS362/cs362w17online/projects/guzmanga/dominion/unittest3.c",
+		"/Users/gguzman/Downloads/randomtestingquiz2/testme.c",
+		"/Users/gguzman/Downloads/randomstring.c",
+		"/Users/gguzman/Downloads/testme.c",
+		"/Users/gguzman/adventurerRefactor.c",
+		"/Users/gguzman/Code/dominion/dominion.c",
+		"/Users/gguzman/Downloads/dominion/dominion.c",
+		"/Users/gguzman/Downloads/YoutubePlayer/app/src/main/AndroidManifest.xml",
+		"/Users/gguzman/Downloads/Top10Downloader/app/src/main/java/com/timbuchalka/top10downloader/MainActivity.java",
+		"/Users/gguzman/Code/twitbot/package.json"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tutorial.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
