@@ -1,8 +1,10 @@
 //Maps are created by digging 'holes' in a map full of walls 
 
+//updating map class to compute the player field of view to light only the visible part of the dungeon 
+
 struct Tile{
-	bool canWalk;	//can a tile be walked through?
-	Tile() : canWalk(false){}	//tiles default to non-walking 
+	bool explored;	//has the player already seen this tile
+	Tile() : explored(false){}	//tiles default to not explored  
 };
 
 class Map{
@@ -12,10 +14,14 @@ public:
 	Map(int width, int height);
 	~Map();
 	bool isWall(int x, int y) const;
+	bool isInFov(int x, int y) const;
+	bool isExplored(int x, int y) const;
+	void computeFov();
 	void render() const;
 
 protected:
 	Tile* tiles;
+	TCODMap *map;
 	friend class BspListener;
 
 	void setWall(int x, int y);

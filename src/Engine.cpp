@@ -34,24 +34,33 @@ void Engine::update(){
 			case TCODK_UP: 
 			if(!map->isWall(player->x, player->y-1)){
 				player->y--;
+				computeFov=true;
 			}
 			break;
 			case TCODK_DOWN:
 				if(!map->isWall(player->x, player->y+1)){
 					player->y++;
+					computeFov=true;
 				}
 			break;
 			case TCODK_LEFT:
 				if(!map->isWall(player->x-1, player->y)){
 					player->x--;
+					computeFov=true;
 				}
 			break;
 			case TCODK_RIGHT:
 				if(!map->isWall(player->x+1, player->y)){
 					player->x++;
+					computeFov=true;
 				}
 			break;
 			default:break;
+		}
+
+		if(computeFov){
+			map->computeFov();
+			computeFov=false;
 		}
 }
 
@@ -60,9 +69,12 @@ void Engine::render(){
 	//draw the map
 	map->render();
 
-	//draw the actors
+	//draw the actors only if they are in the FOV
 	for (Actor **iterator = actors.begin(); iterator != actors.end(); iterator++){
-		(*iterator)->render();
+		Actor *actor=*iterator;
+		if(map->isInFov(actor->x, actor->y)){
+			actor->render();
+		}
 	}
 }
 
