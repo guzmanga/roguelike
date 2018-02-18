@@ -13,11 +13,14 @@ public:
 
 	Map(int width, int height);
 	~Map();
+	bool canWalk(int x, int y) const;
 	bool isWall(int x, int y) const;
 	bool isInFov(int x, int y) const;
 	bool isExplored(int x, int y) const;
 	void computeFov();
 	void render() const;
+	void addMonster(int x, int y);  
+	//places a monster somewhere on the map
 
 protected:
 	Tile* tiles;

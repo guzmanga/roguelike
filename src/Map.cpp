@@ -8,7 +8,7 @@ from outside the .cpp file*/
 
 static const int ROOM_MAX_SIZE = 12;
 static const int ROOM_MIN_SIZE = 6;
-
+static const int MAX_ROOM_MONSTERS = 3;
 
 
 /*class that inherits class ITCODBspCallback (declared in libtcod)
@@ -74,6 +74,26 @@ Map::Map(int width, int height) : width(width), height(height){
 Map::~Map(){
 	delete [] tiles;
 	delete map;
+}
+
+
+//function to detect if a Tile is occupied by another actor already
+bool Map::canWalk(int x, int y)const{
+	if (isWall(x, y)){
+		//this is a wall
+		return false;
+	}
+	for (Actor **iterator=engine.actors.begin();
+		iterator != engine.actors.end();
+		iterator++){
+		Actor *actor = *iterator;
+	if(actor->x == x && actor->y == y){
+		//an actor exists at this point; cannot walk here
+		return false;
+		}
+	}
+
+	return true;
 }
 
 bool Map::isWall(int x, int y)const{
@@ -166,11 +186,36 @@ void Map::createRoom(bool first, int x1, int y1, int x2, int y2){
 		engine.player->x = (x1 + x2)/2;
 		engine.player->y = (y1 + y2)/2;
 	}
+	
+//creates an orc 80% of the time or a troll
+//get a random number of monsters (ceiling is MAX_MONSTERS) and for each one
+//get an empty random tile and place the monster there
 	else{
 		TCODRandom *rng = TCODRandom::getInstance();
-		if(rng->getInt(0, 3) == 0){
-			engine.actors.push(new Actor((x1 + x2)/2, (y1 + y2) /2, '@', 
-				TCODColor::yellow));
+		int nbMonsters = rng->getInt(0, MAX_ROOM_MONSTERS);
+		while(nbMonsters > 0){
+			int x = rng->getInt(x1, y2);
+			int y = rng->getInt(y1, y2);
+			if(canWalk(x, y)){
+				addMonster(x,y);
+			}
+			nbMonsters--;
 		}
+	}
+}
+
+
+
+
+void Map::addMonster(int x, int y){
+	TCODRandom *rng = TCODRandom::getInstance();
+	if(rng->getInt(0, 100) < 80){
+		//create an orc
+		engine.actors.push(new Actor(x, y, 'o', "orc",
+			TCODColor::desaturatedGreen));
+	}else{
+		//create a troll
+		engine.actors.push(new Actor(x, y, 'T', "troll",
+			TCODColor::darkerGreen));
 	}
 }

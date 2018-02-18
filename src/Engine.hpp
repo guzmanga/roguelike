@@ -15,6 +15,20 @@ public:
 	void update();
 	void render();
 
+	//STARTUP(==0), first frame of the game
+	//IDLE(==1), no new turn, redraw the same screen
+	//NEW_TURN(==2), update the monster position
+	//VICTORY(==3), the player won
+	//DEFEAT(==4), the player was killed
+
+	enum GameStatus{
+		STARTUP,
+		IDLE,
+		NEW_TURN,
+		VICTORY,
+		DEFEAT
+	}gameStatus;
+
 private:
 	bool computeFov;
 };
