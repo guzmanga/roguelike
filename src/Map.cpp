@@ -87,7 +87,7 @@ bool Map::canWalk(int x, int y)const{
 		iterator != engine.actors.end();
 		iterator++){
 		Actor *actor = *iterator;
-	if(actor->x == x && actor->y == y){
+	if(actor->blocks && actor->x == x && actor->y == y){
 		//an actor exists at this point; cannot walk here
 		return false;
 		}
@@ -186,7 +186,7 @@ void Map::createRoom(bool first, int x1, int y1, int x2, int y2){
 		engine.player->x = (x1 + x2)/2;
 		engine.player->y = (y1 + y2)/2;
 	}
-	
+
 //creates an orc 80% of the time or a troll
 //get a random number of monsters (ceiling is MAX_MONSTERS) and for each one
 //get an empty random tile and place the monster there
