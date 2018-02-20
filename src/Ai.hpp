@@ -5,7 +5,7 @@
 class Ai{
 public:
 	virtual void update(Actor *owner)=0;
-}
+};
 
 
 class PlayerAi : public Ai{
@@ -22,4 +22,5 @@ public:
 
 protected:
 	void moveOrAttack(Actor *owner, int targetx, int targety);
+	int moveCount;
 };

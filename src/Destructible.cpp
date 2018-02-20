@@ -26,7 +26,7 @@ float Destructible::takeDamage(Actor *owner, float damage){
 
 void Destructible::die(Actor *owner){
 	//transform the actor into a corpose
-	owner->char = '%';
+	owner->ch = '%';
 	owner->col=TCODColor::darkRed;
 	owner->name=corpseName;
 	owner->blocks=false;

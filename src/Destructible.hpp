@@ -6,7 +6,7 @@ public:
 	const char *corpseName; //name once dead/destroyed
 
 	Destructible(float maxHp, float defense, const char *corpseName);
-	inline bool isDead(){return hp <= 0};	//inline keyword tells compiler to replace calls to this function directly by the function code 
+	inline bool isDead(){return hp <= 0;}	//inline keyword tells compiler to replace calls to this function directly by the function code 
 
 	//handles damage given to the Destructible; owner is the actor targetted by the attack, the one containing 
 	//the Destructible class; function returns the number of hit points actually taken(damage - defense)
@@ -28,4 +28,4 @@ class PlayerDestructible : public Destructible{
 public:
 	PlayerDestructible(float maxHp, float defense, const char *corpseName);
 	void die(Actor *owner);
-}
+};

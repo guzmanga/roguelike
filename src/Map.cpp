@@ -1,7 +1,5 @@
-#include "libtcod.hpp"
-#include "Map.hpp"
-#include "Actor.hpp"
-#include "Engine.hpp"
+#include <stdio.h>
+#include "main.hpp"
 
 /*static keyword when used on a global variables means variable is not visible
 from outside the .cpp file*/ 
@@ -211,11 +209,17 @@ void Map::addMonster(int x, int y){
 	TCODRandom *rng = TCODRandom::getInstance();
 	if(rng->getInt(0, 100) < 80){
 		//create an orc
-		engine.actors.push(new Actor(x, y, 'o', "orc",
-			TCODColor::desaturatedGreen));
+		Actor *orc = new Actor(x,y,'o',"orc",TCODColor::desaturatedGreen);
+		orc->destructible = new MonsterDestructible(10,0,"dead orc");
+		orc->attacker = new Attacker(3);
+		orc->ai = new MonsterAi();
+		engine.actors.push(orc);
 	}else{
-		//create a troll
-		engine.actors.push(new Actor(x, y, 'T', "troll",
-			TCODColor::darkerGreen));
+		//create a troll;
+		Actor *troll = new Actor(x,y,'T',"troll",TCODColor::darkerGreen);
+		troll->destructible = new MonsterDestructible(10,0,"dead orc");
+		troll->attacker = new Attacker(4);
+		troll->ai = new MonsterAi();
+		engine.actors.push(troll);
 	}
 }

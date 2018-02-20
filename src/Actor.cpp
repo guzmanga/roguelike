@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.hpp"
 
 //constructor uses initializattion list to define value of class' members

@@ -1,7 +1,5 @@
-#include "libtcod.hpp"
-#include "Actor.hpp"
-#include "Map.hpp"
-#include "Engine.hpp"
+#include <stdio.h>
+#include "main.hpp"
 
 //define instance of global variable engine
 Engine engine(80,50);
