@@ -91,3 +91,9 @@ dereference operator -> access a member (render()) of object being pointed to (A
 Map must be drawn before the Actors so that Actors appear on 'top' of the map
 
 */
+
+
+void Engine::sendToBack(Actor *actor){
+	actors.remove(actor);
+	actors.insertBefore(actor, 0);
+}

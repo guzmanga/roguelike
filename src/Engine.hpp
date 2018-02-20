@@ -8,13 +8,6 @@ public:
 	Actor* player;
 	Map* map;
 
-	int fovRadius;
-
-	Engine();
-	~Engine();
-	void update();
-	void render();
-
 	//STARTUP(==0), first frame of the game
 	//IDLE(==1), no new turn, redraw the same screen
 	//NEW_TURN(==2), update the monster position
@@ -28,6 +21,16 @@ public:
 		VICTORY,
 		DEFEAT
 	}gameStatus;
+
+	int fovRadius;
+
+	Engine();
+	~Engine();
+	void update();
+	void render();
+	void sendToBack(Actor *actor);
+	
+
 
 private:
 	bool computeFov;
