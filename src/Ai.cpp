@@ -1,3 +1,38 @@
+void MonsterAi::update(Actor *owner){
+	//check if actor is living
+	if(owner->destructible && owner->destructible->isDead()){
+		return;
+	}
+
+	if(engine.map->isInFov(owner->x, owner->y)){
+		//the player can be seen. move towards him.
+		moveOrAttack(owner, engine.player->x, engine.player->y);
+	}
+
+}
+
+void MonsterAi::moveOrAttack(Actor *owner, int targetx, int targety){
+	int dx = targetx - owner->x;
+	int dy = targety - owner->y;
+	float distance = sqrtf(dx*dx+dy*dy);
+
+	//get an integer deplacement vector by normalizing it (possible values are -1, 0 and 1)
+	if(distance >= 2){
+		dx=(int)(round(dx/distance));
+		dy=(int)(round(dy/distance));
+		//if the destination can be walked, walk to it 
+		if(engine.map->canWalk(owner->x+dx,owner->y+dy)){
+			owner->x+=dx;
+			owner->y+=dy;
+		}
+	}
+	//if at melee range and have an attacker feature attack the player 
+	else if(owner->attacker){
+			owner->attacker->attack(owner,engine.player);
+		}
+}
+
+
 void PlayerAi::update(Actor *owner){
 	if (owner->destructible && owner->destructible->isDead()){
 		return;

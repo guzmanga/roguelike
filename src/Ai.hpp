@@ -15,3 +15,11 @@ public:
 protected:
 	bool moveOrAttack(Actor *owner, int targetx, int targety);
 };
+
+class MonsterAi : public Ai{
+public:
+	void update(Actor *owner);
+
+protected:
+	void moveOrAttack(Actor *owner, int targetx, int targety);
+};
