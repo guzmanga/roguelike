@@ -4,7 +4,7 @@
 #include "Engine.hpp"
 
 //define instance of global variable engine
-Engine engine;
+Engine engine(80,50);
 
 int main(){
 
