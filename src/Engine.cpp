@@ -9,7 +9,9 @@ Engine::Engine(int screenWidth, int screenHeight) : gameStatus(STARTUP), fovRadi
 	player->attacker = new Attacker(5);
 	player->ai = new PlayerAi();
 	actors.push(player);
-	map = new Map(80, 45);
+	map = new Map(80, 43);
+	gui = new Gui();
+	gui->message(TCODColor::red, "Welcome stranger! Prepare yourself!");
 }
 
 /*dynamically allocate two Actor objects one for the player and one for some NPC 
@@ -24,6 +26,7 @@ note: Actors have not been placed in the Map yet
 Engine::~Engine(){
 	actors.clearAndDelete();
 	delete map;
+	delete gui;
 }
 
 void Engine::update(){
@@ -56,6 +59,7 @@ void Engine::render(){
 	}
 	player->render();
 	//show player stats
+	gui->render();
 	TCODConsole::root->print(1,screenHeight-2, "HP: %d/%d",
 		(int)player->destructible->hp,(int)player->destructible->maxHp);
 }
