@@ -19,4 +19,6 @@ protected:
 		float value, float maxValue, const TCODColor &barColor,
 		const TCODColor &backColor);
 
+	void renderMouseLook();
+
 };

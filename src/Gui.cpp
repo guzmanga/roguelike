@@ -39,6 +39,11 @@ void Gui::render(){
 			colorCoef+=0.3f;
 		}
 	}
+
+	renderMouseLook();
+
+	TCODConsole::blit(con, 0,0,engine.screenWidth,PANEL_HEIGHT,
+		TCODConsole::root,0,engine.screenHeight-PANEL_HEIGHT);
 }
 
 void Gui::renderBar(int x, int y, int width, const char *name,
@@ -100,4 +105,29 @@ void Gui::message(const TCODColor &col, const char *text, ...){
 		//go to next line
 		lineBegin = lineEnd + 1;
 	}while(lineEnd); //ends when (or if) no \n is found
+}
+
+void Gui::renderMouseLook(){
+	if(!engine.map->isInFov(engine.mouse.cx, engine.mouse.cy)){
+		//if mouse is out of fov, nothing to render
+		return;
+	}
+	char buf[128]="";
+
+	bool first=true;
+	for(Actor **it=engine.actors.begin(); it != engine.actors.end(); it++){
+		Actor *actor = *it;
+		//find actors under mouse cursor
+		if(actor->x == engine.mouse.cx && actor->y == engine.mouse.cy){
+			if(!first){
+				strcat(buf, ", ");
+			}else{
+				first=false;
+			}
+			strcat(buf,actor->name);
+		}
+	}
+
+	con->setDefaultForeground(TCODColor::lightGrey);
+	con->print(1,0,buf);
 }
