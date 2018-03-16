@@ -6,6 +6,7 @@ public:
 	const char *corpseName; //name once dead/destroyed
 
 	Destructible(float maxHp, float defense, const char *corpseName);
+	virtual ~Destructible(){};
 	inline bool isDead(){return hp <= 0;}	//inline keyword tells compiler to replace calls to this function directly by the function code 
 
 	//handles damage given to the Destructible; owner is the actor targetted by the attack, the one containing 
@@ -14,6 +15,9 @@ public:
 
 	//takes care of what happens when hp reaches 0 
 	virtual void die(Actor *owner);
+
+	//health potion
+	float heal(float amount);
 
 };
 

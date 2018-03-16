@@ -3,7 +3,8 @@
 
 //constructor uses initializattion list to define value of class' members
 Actor::Actor(int x, int y, int ch, const char *name, const TCODColor &col) :
-	x(x), y(y), ch(ch), col(col), name(name), blocks(true), attacker(NULL), destructible(NULL), ai(NULL){
+	x(x), y(y), ch(ch), col(col), name(name), blocks(true), attacker(NULL), destructible(NULL), ai(NULL),
+	pickable(NULL), container(NULL){
 
 	}
 
@@ -17,6 +18,14 @@ Actor::Actor(int x, int y, int ch, const char *name, const TCODColor &col) :
 	void Actor::update(){
 		printf("The %s growls!\n", name);
 		if(ai)ai->update(this);
+	}
+
+	Actor::~Actor(){
+		if(attacker)delete attacker;
+		if(destructible)delete destructible;
+		if(ai) delete ai;
+		if(pickable) delete pickable;
+		if(container) delete container;
 	}
 
 	/*bool Actor::moveOrAttack(int x, int y){

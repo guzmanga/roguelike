@@ -4,8 +4,48 @@
 		"selected_items":
 		[
 			[
+				"setDe",
+				"setDefaultForeground"
+			],
+			[
 				"TCOD",
+				"TCODConsole"
+			],
+			[
+				"TC",
 				"TCODColor"
+			],
+			[
+				"me",
+				"Message"
+			],
+			[
+				"line",
+				"lineEnd"
+			],
+			[
+				"color",
+				"colorCoef"
+			],
+			[
+				"MSG",
+				"MSG_X"
+			],
+			[
+				"TCD",
+				"TCOD_BKGND_SET"
+			],
+			[
+				"bar",
+				"barWidth"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"p",
+				"PANEL_HEIGHT"
 			],
 			[
 				"scre",
@@ -114,7 +154,7 @@
 			"file": "src/main.hpp",
 			"settings":
 			{
-				"buffer_size": 186,
+				"buffer_size": 205,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -123,7 +163,7 @@
 			"file": "src/Engine.hpp",
 			"settings":
 			{
-				"buffer_size": 741,
+				"buffer_size": 773,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -132,7 +172,7 @@
 			"file": "src/Engine.cpp",
 			"settings":
 			{
-				"buffer_size": 2114,
+				"buffer_size": 2250,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -147,10 +187,28 @@
 			}
 		},
 		{
+			"file": "src/Gui.cpp",
+			"settings":
+			{
+				"buffer_size": 3191,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Gui.hpp",
+			"settings":
+			{
+				"buffer_size": 464,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "src/Map.cpp",
 			"settings":
 			{
-				"buffer_size": 5898,
+				"buffer_size": 5967,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -168,7 +226,7 @@
 			"file": "src/Destructible.cpp",
 			"settings":
 			{
-				"buffer_size": 1571,
+				"buffer_size": 1697,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -186,7 +244,7 @@
 			"file": "src/Attacker.cpp",
 			"settings":
 			{
-				"buffer_size": 591,
+				"buffer_size": 999,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -204,7 +262,7 @@
 			"file": "src/Ai.cpp",
 			"settings":
 			{
-				"buffer_size": 2793,
+				"buffer_size": 2825,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -302,6 +360,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"TCODE",
+			"blit",
+			"isIn",
 			"canwalk",
 			"isWall",
 			"visitNode",
@@ -326,7 +387,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -348,13 +409,14 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -376,13 +438,14 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -410,7 +473,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -419,15 +482,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 186,
+						"buffer_size": 205,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								77,
-								77
+								165,
+								165
 							]
 						],
 						"settings":
@@ -438,7 +501,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -447,15 +510,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 741,
+						"buffer_size": 773,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								516,
-								516
+								532,
+								532
 							]
 						],
 						"settings":
@@ -464,10 +527,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 31.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -476,15 +539,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2114,
+						"buffer_size": 2250,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1518,
-								1518
+								962,
+								962
 							]
 						],
 						"settings":
@@ -493,10 +556,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 177.0,
+						"translation.y": 251.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -525,24 +588,80 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "src/Map.cpp",
+					"file": "src/Gui.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5898,
+						"buffer_size": 3191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								37,
-								37
+								232,
+								236
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/Gui.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								460,
+								460
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/Map.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3090,
+								3090
 							]
 						],
 						"settings":
@@ -551,14 +670,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1297.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "src/Destructible.hpp",
 					"semi_transient": false,
 					"settings":
@@ -576,45 +695,47 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "src/Destructible.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1571,
+						"buffer_size": 1697,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								841,
-								841
+								1697,
+								1697
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 210.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "src/Attacker.hpp",
 					"semi_transient": false,
 					"settings":
@@ -638,39 +759,40 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 13,
 					"file": "src/Attacker.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 591,
+						"buffer_size": 999,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								586,
-								586
+								994,
+								994
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 14,
 					"file": "src/Ai.hpp",
 					"semi_transient": false,
 					"settings":
@@ -694,36 +816,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 15,
 					"file": "src/Ai.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2793,
+						"buffer_size": 2825,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								335,
-								335
+								2760,
+								2760
 							]
 						],
 						"settings":
 						{
 							"auto_name": "",
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 967.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]

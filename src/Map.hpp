@@ -20,6 +20,7 @@ public:
 	void computeFov();
 	void render() const;
 	void addMonster(int x, int y);  
+	void addItem(int x, int y);
 	//places a monster somewhere on the map
 
 protected:
