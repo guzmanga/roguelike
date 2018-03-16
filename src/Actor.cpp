@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include "main.hpp"
 
 //constructor uses initializattion list to define value of class' members
@@ -26,6 +27,12 @@ Actor::Actor(int x, int y, int ch, const char *name, const TCODColor &col) :
 		if(ai) delete ai;
 		if(pickable) delete pickable;
 		if(container) delete container;
+	}
+
+	float Actor::getDistance(int cx, int cy) const{
+		int dx=x-cx;
+		int dy=y-cy;
+		return sqrt(dx*dx+dy*dy);
 	}
 
 	/*bool Actor::moveOrAttack(int x, int y){

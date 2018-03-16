@@ -16,6 +16,7 @@ public :
 	//const means that function does not modify content of Actor (func can be called on constant objects)
 	void update(); //handles monster turn
 	void render() const; 
+	float getDistance(int cx, int cy) const;
 
 	//bool moveOrAttack(int x, int y); //handles player turn; true if player actually moved, false if a wall or monster is hit
 	
